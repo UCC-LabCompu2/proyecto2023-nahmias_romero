@@ -29,7 +29,52 @@
         ACA VA DE NUESTRA PAGINA WEB
     </p>
 </header>
+
+
 <section>
+    <form id="Entrada y salidad de datos">
+
+        <p>
+            <label for="Moneda de entrada">Moneda De Entrada:</label>
+            <select id="moneda de entrada">
+                <option value="Dolar (Estadounidense)">Dolar (Estadounidense)</option>
+                <option value="Dolar (Australiano)">Dolar (Australiano)</option>
+                <option value="Libras Esterlinas">Libras Esterlinas</option>
+                <option value="Euros">Euros</option>
+                <option value="Reales">Reales</option>
+                <option value="Peso Uruguayo">Peso Uruguayo</option>
+                <option value="Bolivares">Bolivares</option>
+                <option value="Peso Argentino">Peso Argentino</option>
+            </select>
+        </p>
+        <p>
+            <label for="cantidad">Cantidad: </label> <input type="text" name="Cantidad" placeholder="Inserte cantidad de: $" id="cantidad">
+        </p>
+        <p>
+            <label for="Moneda de salida">Moneda De Entrada:</label>
+            <select id="moneda de salida">
+                <option value="Dolar (Estadounidense)">Dolar (Estadounidense)</option>
+                <option value="Dolar (Australiano)">Dolar (Australiano)</option>
+                <option value="Libras Esterlinas">Libras Esterlinas</option>
+                <option value="Euros">Euros</option>
+                <option value="Reales">Reales</option>
+                <option value="Peso Uruguayo">Peso Uruguayo</option>
+                <option value="Bolivares">Bolivares</option>
+                <option value="Peso Argentino">Peso Argentino</option>
+            </select>
+        </p>
+        <p>
+            <button type="CONVERTIR">CONVERTIR</button>
+        </p>
+        <p>
+            <label for="total">TOTAL: </label><textarea id="total"></textarea>
+        </p>
+    </form>
+
+</section>
+
+
+<footer>
     <!--tabla para contacto nuestro-->
     <style>
         table, tr, td, th{
@@ -37,8 +82,8 @@
         }
     </style>
     <table>
-        <figure><img src="FOTOS/cotactanos"></figure>
-        <caption>Nuestra informacion</caption>
+        <figure><img SRC="IMAGENES/contactenos"></figure> <!--imagenen de contactano-->
+        <caption><u>Nuestra informacion</u></caption>
         <caption>-                  -</caption>
         <thead>
         <th>Nombre</th>
@@ -62,8 +107,6 @@
         </tr>
         </tbody>
     </table>
-
-</section>
-
+</footer>
 </body>
 </html>
