@@ -11,7 +11,16 @@ link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
 
 ### Acerca del proyecto
 - [ ] Este es un proyecto estudiantil de la materia más importante de Ingeniería, llamada laboratorio de computación II
-- [ ] Los aprendizajes principales era la creación de una pagina web desde cero
+- [ ] Los aprendizajes principales era la elaboración de una pagina web desde cero
+- [ ] Para la elaboración necesitamos aproximadamente dos meses de aprendizaje y trabajo.
+
+### Esta página es un simulador de un conversor de monedas y para la misma utilizamos las siguientes tecnologías
+- [1] Lapiz y papel para el primer sketch
+- [2] Lapiz y papel para el primer sketch
+
+
+  (mínimamente: título del proyecto, autores con nombre y apellido,
+- link de gh-pages, contenido de la página, listado de tecnologías usadas, etc)
 
 [Casa de cambio](http://localhost:63342/proyecto2023-nahmias_romero/index.html?_ijt=4jbep5pi40uj1v4gtmnvmblrt0)
 

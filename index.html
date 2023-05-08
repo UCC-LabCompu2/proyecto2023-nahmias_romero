@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cousine&display=swap" rel="stylesheet">
 
     <link rel="shortcut icon" href="imagenes/faviconCheto.png">
     <time></time>
@@ -10,18 +13,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cousine&display=swap" rel="stylesheet">
-
-    <!--    <link rel="preconnect" href="">-->
-    <!--    <link href="https://fonts.googleapis.com/css2?family=Cousine&display=swap" rel="stylesheet">-->
-    <title>Casa De Cambio</title>
     <link rel="stylesheet" href="css.css" type="text/css">
     <link rel="shortcut icon" href="IMAGENES/icono.png" type="IMAGENES/x-icon">
-
+    <title>Casa De Cambio</title>
 </head>
+
+
 
 <body>
 
@@ -30,65 +30,58 @@
     </div>
 </div>
 
-<div class="head">
-    <div class="logo">
-        <a href="#">Logo</a>
-    </div>
-
-    <nav class="navbar">   <!--Enlaces-->
-        <a href="#">Inicio</a>
-        <a href="#">Contacto</a>
-    </nav>
-
-</div>
 
 <header class="contenido header">
     <h1 class="Titulo">Inicio</h1>
     <p>  <!--es para escribir parrafos-->
-        ACA VA DE NUESTRA PAGINA WEB
+        CONVERSOR DE MONEDAS
     </p>
 </header>
 
 
 <section>
     <form id="Entrada y salidad de datos">
-
-        <p>
-            <label for="Moneda de entrada">Moneda De Entrada:</label>
-            <select id="moneda de entrada">
-                <option value="Dolar (Estadounidense)">Dolar (Estadounidense)</option>
-                <option value="Dolar (Australiano)">Dolar (Australiano)</option>
-                <option value="Libras Esterlinas">Libras Esterlinas</option>
-                <option value="Euros">Euros</option>
-                <option value="Reales">Reales</option>
-                <option value="Peso Uruguayo">Peso Uruguayo</option>
-                <option value="Bolivares">Bolivares</option>
-                <option value="Peso Argentino">Peso Argentino</option>
-            </select>
-        </p>
-        <p>
-            <label for="cantidad">Cantidad:</label> <input type="text" name="Cantidad"
-                                                           placeholder="Inserte cantidad de: $" id="cantidad">
-        </p>
-        <p>
-            <label for="Moneda de salida">Moneda De Entrada:</label>
-            <select id="moneda de salida">
-                <option value="Dolar (Estadounidense)">Dolar (Estadounidense)</option>
-                <option value="Dolar (Australiano)">Dolar (Australiano)</option>
-                <option value="Libras Esterlinas">Libras Esterlinas</option>
-                <option value="Euros">Euros</option>
-                <option value="Reales">Reales</option>
-                <option value="Peso Uruguayo">Peso Uruguayo</option>
-                <option value="Bolivares">Bolivares</option>
-                <option value="Peso Argentino">Peso Argentino</option>
-            </select>
-        </p>
-        <p>
-            <button type="CONVERTIR">CONVERTIR</button>
-        </p>
-        <p>
-            <label for="total">TOTAL: </label><textarea id="total"></textarea>
-        </p>
+        <div class="columna1">
+            <p>
+                <label for="Moneda de entrada">Moneda De Entrada:</label>
+                <select id="moneda de entrada">
+                    <option value="Dolar (Estadounidense)">Dolar (Estadounidense)</option>
+                    <option value="Dolar (Australiano)">Dolar (Australiano)</option>
+                    <option value="Libras Esterlinas">Libras Esterlinas</option>
+                    <option value="Euros">Euros</option>
+                    <option value="Reales">Reales</option>
+                    <option value="Peso Uruguayo">Peso Uruguayo</option>
+                    <option value="Bolivares">Bolivares</option>
+                    <option value="Peso Argentino">Peso Argentino</option>
+                </select>
+            </p>
+            <p>
+                <label for="cantidad">Cantidad:</label> <input type="text" name="Cantidad"
+                                                               placeholder="Inserte cantidad de: $" id="cantidad">
+            </p>
+            <p>
+                <label for="Moneda de salida">Moneda De Salida:</label>
+                <select id="moneda de salida">
+                    <option value="Dolar (Estadounidense)">Dolar (Estadounidense)</option>
+                    <option value="Dolar (Australiano)">Dolar (Australiano)</option>
+                    <option value="Libras Esterlinas">Libras Esterlinas</option>
+                    <option value="Euros">Euros</option>
+                    <option value="Reales">Reales</option>
+                    <option value="Peso Uruguayo">Peso Uruguayo</option>
+                    <option value="Bolivares">Bolivares</option>
+                    <option value="Peso Argentino">Peso Argentino</option>
+                </select>
+            </p>
+            <p>
+                <button type="CONVERTIR">CONVERTIR</button>
+            </p>
+            <p>
+                <label for="total">TOTAL: </label><textarea id="total"></textarea>
+            </p>
+            <canvas id="canvas"></canvas>
+            <img src="imagenes/billete.png">
+            <!--Animación-->
+        </div>
     </form>
 
 </section>
@@ -96,38 +89,35 @@
 
 <footer>
     <!--tabla para contacto nuestro-->
-    <style>
-        table, tr, td, th {
-            border: 1px solid #000000;
-        }
-    </style>
 
-    <table>
-        <figure><img src="imagenes/contactenosCheto.png"></figure> <!--imagenen de contactano-->
-        <caption><u>Nuestra informacion</u></caption>
-        <caption>- -</caption>
-        <thead>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Carrera</th>
-        <th>Mail</th>
-        <th>Telefono</th>
-        </thead>
-        <tbody>
-        <tr>
-            <td colspan="2">Arnon Nahmias</td>
-            <td>Sistemas</td>
-            <td><a href="http://2222270@ucc.edu.ar/" target="_blanc">http://2222270@ucc.edu.ar/</a></td>
-            <td>+54 351 281‑2186</td>
-        </tr>
-        <tr>
-            <td colspan="2">Joaquin Romero</td>
-            <td>Sistemas</td>
-            <td><a href="http://2216694@ucc.edu.ar/" target="_blanc">http://2216694@ucc.edu.ar/</a></td>
-            <td>+54 351 220-9974</td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="columna2">
+        <table>
+            <figure><img src="imagenes/contactenosCheto.png" alt="Imagen de contacto"></figure> <!--imagenen de contactano-->
+            <caption><u>Nuestra informacion</u></caption>
+            <caption>- -</caption>
+            <thead>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Carrera</th>
+            <th>Mail</th>
+            <th>Telefono</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td colspan="2">Arnon Nahmias</td>
+                <td>Sistemas</td>
+                <td><a href="http://2222270@ucc.edu.ar/" target="_blanc">http://2222270@ucc.edu.ar/</a></td>
+                <td>+54 351 281‑2186</td>
+            </tr>
+            <tr>
+                <td colspan="2">Joaquin Romero</td>
+                <td>Sistemas</td>
+                <td><a href="http://2216694@ucc.edu.ar/" target="_blanc">http://2216694@ucc.edu.ar/</a></td>
+                <td>+54 351 220-9974</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </footer>
 </body>
 </html>
