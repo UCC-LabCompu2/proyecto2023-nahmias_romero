@@ -2,20 +2,23 @@ body {
     text-align: left;
     font-family: 'Sedgwick Ave Display', monospace;
     padding: 2%;
+    background: #b96f90;
+    background-image: url("imagenes/fondoBase4.png");
+    background-repeat: repeat;
     padding-left: 75px;
     margin-top: 65px;
 }
 
-div#general{
-    width: 500px;
-    height: 400px;
-    background-color: #7c807a;
+/*div#general{*/
+/*    width: 500px;*/
+/*    height: 400px;*/
+/*    background-color: #7c807a;*/
 
-}
+/*}*/
 
-div#secundario{
-    float: right;
-    width: 400px;
-    height: 300px;
-    background-color: #f6f1ed;
-}
+/*div#secundario{*/
+/*    float: right;*/
+/*    width: 400px;*/
+/*    height: 300px;*/
+/*    background-color: #f6f1ed;*/
+/*}*/
