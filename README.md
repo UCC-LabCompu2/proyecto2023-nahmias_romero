@@ -14,10 +14,13 @@ link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
 - [ ] Los aprendizajes principales era la elaboración de una pagina web desde cero
 - [ ] Para la elaboración necesitamos aproximadamente dos meses de aprendizaje y trabajo.
 
-### Esta página es un simulador de un conversor de monedas y para la misma utilizamos las siguientes tecnologías
-- [1] Lapiz y papel para el primer sketch
-- [2] Lapiz y papel para el primer sketch
-
+### Se utilizaron principalmente las siguientes herramientas:
+- [1] Lapiz y papel para el primer sketch.
+- [2] [Figma](https://www.figma.com/) Para el Mockup digital.
+- [3] WebStorm como entorno de trabajo.
+- [4] Git para control de versiones.
+- [5] Google font para facilitar alguanas fuentes de texto.
+- [6] GitDuck para una mejor colaboración.
 
   (mínimamente: título del proyecto, autores con nombre y apellido,
 - link de gh-pages, contenido de la página, listado de tecnologías usadas, etc)

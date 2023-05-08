@@ -26,4 +26,8 @@ table, tr, td, th {
     margin: 0px 50px;
 }
 
+canvas{
+    border: 1px solid black;
+}
+
 
