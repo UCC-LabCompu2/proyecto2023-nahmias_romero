@@ -19,8 +19,8 @@ link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
 - [ ] Lapiz y papel para el primer sketch.
 - [ ] [Figma](https://www.figma.com/) Para el Mockup digital.
 - [ ] [WebStorm](https://www.jetbrains.com/webstorm/promo/?source=google&medium=cpc&campaign=9641686239&term=webstorm&content=523833970748&gad=1&gclid=Cj0KCQjwu-KiBhCsARIsAPztUF2edaqDa4vuIBBRC1VlPrYi5nOjRFoN8TR8ETkooGmuS_vGqkY362saAk2XEALw_wcB) como entorno de trabajo.
-- [ ] [GitHub]() para control de versiones.
-- [ ] Google font para facilitar alguanas fuentes de texto.
-- [ ] GitDuck para una mejor colaboración.
+- [ ] [GitHub](https://github.com/) para control de versiones.
+- [ ] [Google font](https://fonts.google.com/) para facilitar alguanas fuentes de texto.
+- [ ] [GitDuck](https://duckly.com) para una mejor colaboración.
 
 - Link del sitio: [Casa de cambio](https://ucc-labcompu2.github.io/proyecto2023-nahmias_romero/)
