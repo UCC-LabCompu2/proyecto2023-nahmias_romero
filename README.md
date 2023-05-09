@@ -23,4 +23,4 @@ link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
 - [ ] Google font para facilitar alguanas fuentes de texto.
 - [ ] GitDuck para una mejor colaboración.
 
-- link al sitio: [Casa de cambio]([http://localhost:63342/proyecto2023-nahmias_romero/index.html?_ijt=4jbep5pi40uj1v4gtmnvmblrt0](https://ucc-labcompu2.github.io/proyecto2023-nahmias_romero/))
+- link al sitio: [Casa de cambio](http://localhost:63342/proyecto2023-nahmias_romero/index.html?_ijt=4jbep5pi40uj1v4gtmnvmblrt0](https://ucc-labcompu2.github.io/proyecto2023-nahmias_romero/)
