@@ -2,8 +2,6 @@
 Estructura de Proyecto Lab de Compu II - 2023
 
 ## Casa de cambio
-Modificar el Readme.MD y colocar información del proyecto/página (mínimamente: título del proyecto, autores con nombre y apellido, 
-link de gh-pages, contenido de la página,  listado de tecnologías usadas, etc)
 
 ### Autores:
 - [ ] Nahmias Arnon, clave: 2222270
