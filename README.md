@@ -21,5 +21,5 @@ Estructura de Proyecto Lab de Compu II - 2023
 - [ ] [Google font](https://fonts.google.com/) para facilitar alguanas fuentes de texto.
 - [ ] [GitDuck](https://duckly.com) para una mejor colaboración.
 
-- Link del sitio: [Casa de cambio](https://ucc-labcompu2.github.io/proyecto2023-nahmias_romero/index.html)
+- Link del sitio: [Casa de cambio](https://github.com/UCC-LabCompu2/proyecto2023-nahmias_romero)
 
