@@ -15,11 +15,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cousine&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css.css" type="text/css">
+    <script type="text/javascript" src="misFunciones.js"></script>
     <title>Casa De Cambio</title>
 </head>
 
 
-<body>
+<body class="body-numeros">
 
 <header class="contenido header">
     <h5 class="Inicio"><a href="index.html">Inicio</a>></h5>
@@ -36,12 +37,9 @@
                 <label for="Moneda-de-entrada">Moneda De Entrada:</label>
                 <select id="Moneda-de-entrada">
                     <option value="Dolar-(Estadounidense)">Dolar (Estadounidense)</option>
-                    <option value="Dolar-(Australiano)">Dolar (Australiano)</option>
                     <option value="Libras-Esterlinas">Libras Esterlinas</option>
                     <option value="Euros">Euros</option>
                     <option value="Reales">Reales</option>
-                    <option value="Peso-Uruguayo">Peso Uruguayo</option>
-                    <option value="Bolivares">Bolivares</option>
                     <option value="Peso-Argentino">Peso Argentino</option>
                 </select>
             </p>
@@ -53,12 +51,9 @@
                 <label for="Moneda-de-salida">Moneda De Salida:</label>
                 <select id="Moneda-de-salida">
                     <option value="Dolar-(Estadounidense)">Dolar (Estadounidense)</option>
-                    <option value="Dolar-(Australiano)">Dolar (Australiano)</option>
                     <option value="Libras-Esterlinas">Libras Esterlinas</option>
                     <option value="Euros">Euros</option>
                     <option value="Reales">Reales</option>
-                    <option value="Peso-Uruguayo">Peso Uruguayo</option>
-                    <option value="Bolivares">Bolivares</option>
                     <option value="Peso-Argentino">Peso Argentino</option>
                 </select>
             </p>
@@ -69,7 +64,7 @@
                 <label for="total">TOTAL: </label><textarea id="total"></textarea>
             </p>
             <canvas id="canvas"></canvas>
-            <img alt="esto es una imagen representativa de billete" src="imagenes/billete.png">
+            <img alt="esto es una imagen representativa de billete" src="IMAGENES/billete.png">
             <!--Animación -->
         </div>
     </form>
@@ -82,7 +77,7 @@
     <div class="columna2">
         <table>
             <figure><img id="contactenosCheto" src="imagenes/contactenosCheto.png"
-                         alt="Esto es una imagen representativa de contacto"></figure> <!--imagenen de contactano-->
+                         alt="Esto es una imagen representativa de contacto"></figure> <!--imagenen de contactenos-->
             <caption><u>Nuestra información</u></caption>
             <caption>- -</caption>
             <thead>
@@ -109,5 +104,34 @@
         </table>
     </div>
 </footer>
+
+<div class="centrado div-convertidor">
+    <h1>Moneda Convertida</h1>
+    <form name="lasMonedasDelMundo">
+        <p>
+            <label for="Dolar-(Estadounidense)"> Dolar</label> = <input id="Dolar-(Estadounidense)" type="text"
+                                                                        name="unid_dolar"
+                                                                        onchange="conversorMonedas(this.id,this.value)">
+        </p>
+        <p>
+            <label for="Libras-Esterlinas"> Libras</label> = <input id="Libras-Esterlinas" type="text"
+                                                                    name="unid_libras"
+                                                                    onchange="conversorMonedas(this.id,this.value)">
+        </p>
+        <p>
+            <label for="Euros"> Euros </label> = <input id="Euros" type="text" name="unid_euro"
+                                                        onchange="conversorMonedas(this.id,this.value)">
+        </p>
+        <p>
+            <label for="Reales"> Reales</label> = <input id="Reales" type="text" name="unid_reales"
+                                                         onchange="conversorMonedas(this.id,this.value)">
+        </p>
+        <p>
+            <label for="Peso-Argentino"> Peso</label> = <input id="Peso-Argentino" type="text" name="unid_peso"
+                                                               onchange="conversorMonedas(this.id,this.value)">
+        </p>
+    </form>
+</div>
+
 </body>
 </html>
