@@ -46,3 +46,20 @@ function conversorMonedas(id, valor) {
         document.lasMonedasDelMundo.unid_reales.value = Math.round(valor * 0.0213 * 100) / 100;
     }
 }
+
+y=0
+dy = 1;
+function animarBillete(){
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+
+    canvas.width = canvas.width;
+
+    var img = new Image();
+    img.src = "imagenes/billete.png";
+
+    img.onload = function (){
+        ctx.drawImage(img, 10,y);
+    }
+y+=dy;
+}
