@@ -20,7 +20,7 @@
 </head>
 
 
-<body class="body-numeros">
+<body class="body-numeros" onload="setInterval(animarBillete, 50)">
 
 <header class="contenido header">
     <h5 class="Inicio"><a href="index.html">Inicio</a>></h5>
@@ -30,46 +30,46 @@
 </header>
 
 
-<section>
-    <form id="Entrada-y-salida-de-datos">
-        <div class="columna1">
-            <p>
-                <label for="Moneda-de-entrada">Moneda De Entrada:</label>
-                <select id="Moneda-de-entrada">
-                    <option value="Dolar-(Estadounidense)">Dolar (Estadounidense)</option>
-                    <option value="Libras-Esterlinas">Libras Esterlinas</option>
-                    <option value="Euros">Euros</option>
-                    <option value="Reales">Reales</option>
-                    <option value="Peso-Argentino">Peso Argentino</option>
-                </select>
-            </p>
-            <p>
-                <label for="cantidad">Cantidad:</label> <input type="text" name="Cantidad"
-                                                               placeholder="Inserte cantidad de: $" id="Cantidad">
-            </p>
-            <p>
-                <label for="Moneda-de-salida">Moneda De Salida:</label>
-                <select id="Moneda-de-salida">
-                    <option value="Dolar-(Estadounidense)">Dolar (Estadounidense)</option>
-                    <option value="Libras-Esterlinas">Libras Esterlinas</option>
-                    <option value="Euros">Euros</option>
-                    <option value="Reales">Reales</option>
-                    <option value="Peso-Argentino">Peso Argentino</option>
-                </select>
-            </p>
-            <p>
-                <button type="CONVERTIR">CONVERTIR</button>
-            </p>
-            <p>
-                <label for="total">TOTAL: </label><textarea id="total"></textarea>
-            </p>
-            <canvas id="canvas"></canvas>
-            <img alt="esto es una imagen representativa de billete" src="IMAGENES/billete.png">
-            <!--Animación -->
-        </div>
-    </form>
+<!--<section>-->
+<!--    <form id="Entrada-y-salida-de-datos">-->
+<!--        <div class="columna1">-->
+<!--            <p>-->
+<!--                <label for="Moneda-de-entrada">Moneda De Entrada:</label>-->
+<!--                <select id="Moneda-de-entrada">-->
+<!--                    <option value="Dolar-(Estadounidense)">Dolar (Estadounidense)</option>-->
+<!--                    <option value="Libras-Esterlinas">Libras Esterlinas</option>-->
+<!--                    <option value="Euros">Euros</option>-->
+<!--                    <option value="Reales">Reales</option>-->
+<!--                    <option value="Peso-Argentino">Peso Argentino</option>-->
+<!--                </select>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <label for="cantidad">Cantidad:</label> <input type="text" name="Cantidad"-->
+<!--                                                               placeholder="Inserte cantidad de: $" id="Cantidad">-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <label for="Moneda-de-salida">Moneda De Salida:</label>-->
+<!--                <select id="Moneda-de-salida">-->
+<!--                    <option value="Dolar-(Estadounidense)">Dolar (Estadounidense)</option>-->
+<!--                    <option value="Libras-Esterlinas">Libras Esterlinas</option>-->
+<!--                    <option value="Euros">Euros</option>-->
+<!--                    <option value="Reales">Reales</option>-->
+<!--                    <option value="Peso-Argentino">Peso Argentino</option>-->
+<!--                </select>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <button type="CONVERTIR">CONVERTIR</button>-->
+<!--            </p>-->
+<!--            <p>-->
+<!--                <label for="total">TOTAL: </label><textarea id="total"></textarea>-->
+<!--            </p>-->
+<!--            <canvas id="canvas"></canvas>-->
+<!--            <img alt="esto es una imagen representativa de billete" src="IMAGENES/billete.png">-->
+<!--            &lt;!&ndash;Animación &ndash;&gt;-->
+<!--        </div>-->
+<!--    </form>-->
 
-</section>
+<!--</section>-->
 
 
 <footer>
@@ -106,7 +106,8 @@
 </footer>
 
 <div class="centrado div-convertidor">
-    <h1>Moneda Convertida</h1>
+    <br>
+    <p>Ingrese la moneda que desee:</p>
     <form name="lasMonedasDelMundo">
         <p>
             <label for="Dolar-(Estadounidense)"> Dolar</label> = <input id="Dolar-(Estadounidense)" type="text"
@@ -130,6 +131,10 @@
             <label for="Peso-Argentino"> Peso</label> = <input id="Peso-Argentino" type="text" name="unid_peso"
                                                                onchange="conversorMonedas(this.id,this.value)">
         </p>
+
+        <canvas id="canvas" class="billete" width="250px" height="350px"></canvas>
+        <br>
+<!--        <img alt="esto es una imagen representativa de billete" src="IMAGENES/billete.png">-->
     </form>
 </div>
 
