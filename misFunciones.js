@@ -3,8 +3,8 @@
  * @method animarBillete
  */
 
-y=0
-dy = 1;
+var y=0
+var dy = 1;
 function animarBillete(){
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
@@ -16,7 +16,7 @@ function animarBillete(){
         var img = new Image();
         img.src = "imagenes/dolar.png";
     }
-    else if (monedaSalida === "Libras-Esterlinas") {
+    else if (monedaSalida === "Libras-(Esterlinas)") {
         var img = new Image();
         img.src = "imagenes/libraEsterlina.png";
     }
@@ -28,7 +28,7 @@ function animarBillete(){
         var img = new Image();
         img.src = "imagenes/reales.png";
     }
-    else if (monedaSalida === "Peso-Argentino") {
+    else if (monedaSalida === "Peso-(Argentino)") {
         var img = new Image();
         img.src = "imagenes/pesosArg.png";
     }
@@ -36,7 +36,7 @@ function animarBillete(){
     img.onload = function (){
         ctx.drawImage(img, y, 10);
     }
-y+=dy;
+    y+=dy;
 }
 
 
