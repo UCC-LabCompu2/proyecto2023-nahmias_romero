@@ -1,16 +1,7 @@
-
 /**
- * Conversion de monedas, de dolares, libras, reales, pesos y euros.
- * @method Nombre de la función
- * @param {string} id - El id de los imputs de dolares, libras, reales, pesos o euros.
- * @param {number} valor - El valor de los imputs de dolares, libras, reales, pesos o euros.
- * @return
+ * Anima la imagen del billete
+ * @method animarBillete
  */
-
-/*
-la funciom "animarBillete()" lo que hace es agarrar la foto billete.png que se encuentra dentro de la carpeta imagenes
-y hacerla que se mueva en formato de animacion desde arriba hacia abajo
-*/
 
 var y = 0;
 var dy = 1;
@@ -30,10 +21,12 @@ function animarBillete() {
     y += dy;
 }
 
-/*
-la funcion "conversorMonedas()" lo que hace es que al ingresar un valor en el campo cantidad, te lo convierte a la
-moneda que vos queres, habiendo seleccionado previamente desde que moneda estas convirtiendo
+
+/**
+ * Convierte de una moneda a otra
+ * @method conversorMonedas
  */
+
 
 function conversorMonedas() {
     const monedaEntrada = document.getElementById("Moneda-de-entrada").value;
