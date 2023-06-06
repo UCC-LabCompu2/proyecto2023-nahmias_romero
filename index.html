@@ -20,7 +20,7 @@
     <title>Casa De Cambio</title>
 </head>
 
-<body class="body-numeros" onload="setInterval(animarBillete, 50)" class="fondo" onload="setInterval(animateFondo, 50)">
+<body>
 
 <header class="contenido header">
     <h5 class="Inicio"><a href="index.html">Inicio</a>></h5>
@@ -56,7 +56,7 @@
                 </select>
             </p>
             <p>
-                <button type="button" onclick="conversorMonedas()">CONVERTIR</button>
+                <button type="button" onclick="conversorMonedas(); setInterval(animarBillete, 50)">CONVERTIR</button>
             </p>
             <p>
                 <label for="resultado">TOTAL: </label>
