@@ -3,22 +3,40 @@
  * @method animarBillete
  */
 
-var y = 0;
-var dy = 1;
-
-function animarBillete() {
-    const canvas = document.getElementById("canvas");
-    const ctx = canvas.getContext("2d");
+y=0
+dy = 1;
+function animarBillete(){
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var monedaSalida = document.getElementById("Moneda-de-salida").value;
 
     canvas.width = canvas.width;
 
-    const img = new Image();
-    img.src = "imagenes/billete.png";
+    if (monedaSalida === "Dolar-(Estadounidense)") {
+        var img = new Image();
+        img.src = "imagenes/dolar.png";
+    }
+    else if (monedaSalida === "Libras-Esterlinas") {
+        var img = new Image();
+        img.src = "imagenes/libraEsterlina.png";
+    }
+    else if (monedaSalida === "Euros") {
+        var img = new Image();
+        img.src = "imagenes/euro.png";
+    }
+    else if (monedaSalida === "Reales") {
+        var img = new Image();
+        img.src = "imagenes/reales.png";
+    }
+    else if (monedaSalida === "Peso-Argentino") {
+        var img = new Image();
+        img.src = "imagenes/pesosArg.png";
+    }
 
-    img.onload = function () {
-        ctx.drawImage(img, 10, y);
-    };
-    y += dy;
+    img.onload = function (){
+        ctx.drawImage(img, y, 10);
+    }
+y+=dy;
 }
 
 
