@@ -1,15 +1,12 @@
 body {
     text-align: left;
     font-family: 'Sedgwick Ave Display', monospace;
-    padding: 2%;
-    /*background-image: url("imagenes/fondoBase4.png");*/
-    /*background-repeat: repeat;*/
     padding-left: 75px;
     margin-top: 1px;
     background-color: #9f9fa0;
 }
 
-h1{
+h1 {
     font-family: 'Cousine', monospace;
 }
 
@@ -17,23 +14,38 @@ table, tr, td, th {
     table-layout: fixed;
     border: 1px solid #000000;
 }
-.columna1{
+
+.columna1 {
     float: left;
     width: 20%;
     margin: 50px 1px;
 }
-.columna2{
+
+.columna2 {
     float: right;
     margin: 0px 50px;
-    background-color: white;
+    background-color: #ffffff;
     height: max-content;
     position: relative;
 }
 
-canvas{
-    border: 0px solid #000000;
-}
-#contactenosCheto{
+/*canvas {*/
+/*    border: 1px solid #000000;*/
+/*}*/
+
+#contactenosCheto {
     width: 200px;
+}
+
+a:link, a:visited {
+    color: #000000;
+}
+
+a:hover {
+    font-size: 1.1em;
+}
+
+a:active {
+    font-weight: bold;
 }
 
