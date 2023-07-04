@@ -3,77 +3,70 @@
  * @method animarBillete
  */
 
-var y=0
+var y = 0;
 var dy = 1;
-function animarBillete(){
-    var canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-    var monedaSalida = document.getElementById("Moneda-de-salida").value;
 
-    canvas.width = canvas.width;
+function animarBillete() {
+  var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  var monedaSalida = document.getElementById("Moneda-de-salida").value;
 
-    if (monedaSalida === "Dolar-(Estadounidense)") {
-        var img = new Image();
-        img.src = "imagenes/dolar.png";
-    }
-    else if (monedaSalida === "Libras-(Esterlinas)") {
-        var img = new Image();
-        img.src = "imagenes/libraEsterlina.png";
-    }
-    else if (monedaSalida === "Euros") {
-        var img = new Image();
-        img.src = "imagenes/euro.png";
-    }
-    else if (monedaSalida === "Reales") {
-        var img = new Image();
-        img.src = "imagenes/reales.png";
-    }
-    else if (monedaSalida === "Peso-(Argentino)") {
-        var img = new Image();
-        img.src = "imagenes/pesosArg.png";
-    }
+  canvas.width = canvas.width;
 
-    img.onload = function (){
-        ctx.drawImage(img, y, 10);
-    }
-    y+=dy;
+  if (monedaSalida === "Dolar-(Estadounidense)") {
+    var img = new Image();
+    img.src = "imagenes/dolar.png";
+  } else if (monedaSalida === "Libras-(Esterlinas)") {
+    var img = new Image();
+    img.src = "imagenes/libraEsterlina.png";
+  } else if (monedaSalida === "Euros") {
+    var img = new Image();
+    img.src = "imagenes/euro.png";
+  } else if (monedaSalida === "Reales") {
+    var img = new Image();
+    img.src = "imagenes/reales.png";
+  } else if (monedaSalida === "Peso-(Argentino)") {
+    var img = new Image();
+    img.src = "imagenes/pesosArg.png";
+  }
+
+  img.onload = function () {
+    ctx.drawImage(img, y, 10);
+  };
+  y += dy;
 }
-
 
 /**
  * Convierte de una moneda a otra
  * @method conversorMonedas
  */
 
-
 function conversorMonedas() {
-    const monedaEntrada = document.getElementById("Moneda-de-entrada").value;
-    const monedaSalida = document.getElementById("Moneda-de-salida").value;
-    let cantidad = document.getElementById("Cantidad").value;
+  const monedaEntrada = document.getElementById("Moneda-de-entrada").value;
+  const monedaSalida = document.getElementById("Moneda-de-salida").value;
+  let cantidad = document.getElementById("Cantidad").value;
 
-    if (cantidad.length > 10) {
-        document.getElementById("resultado").textContent = "";
-        alert("La cantidad ingresada supera el límite de caracteres permitido.");
-        return; // frena el funcionamiento del codigo de la función si la cantidad es demasiado larga.
-    }
+  if (cantidad.length > 10) {
+    document.getElementById("resultado").textContent = "";
+    alert("La cantidad ingresada supera el límite de caracteres permitido.");
+    return; // Frena el funcionamiento del código de la función si la cantidad es demasiado larga.
+  }
 
-    if (isNaN(cantidad) || cantidad <= 0) {
-        document.getElementById("resultado").textContent = "";
-        alert("El valor ingresado es incorrecto");
-        return; // detiene la ejecución de la función si la cantidad es incorrecta.
-    }
+  if (isNaN(cantidad) || cantidad <= 0) {
+    document.getElementById("resultado").textContent = "";
+    alert("El valor ingresado es incorrecto");
+    return; // Detiene la ejecución de la función si la cantidad es incorrecta.
+  }
 
-    if (isNaN(cantidad)) {
-        //aca se fija que no haya letras y en caso que si haya saca un cartel de alerta
-        document.lasUnidades.Libras(Esterlinas).value = "";
-        document.lasUnidades.Dolar(Estadounidense).value = "";
-        document.lasUnidades.Euros.value = "";
-        document.lasUnidades.Reales.value = "";
-        document.lasUnidades.Peso(Argentino).value = "";
-
-
-    } else {
-        if (monedaEntrada === monedaSalida) {
+  if (isNaN(cantidad)) {
+    // Aquí se fija que no haya letras y, en caso de que sí las haya, muestra un mensaje de alerta
+    document.getElementById("lasUnidades").LibrasEsterlinas.value = "";
+    document.getElementById("lasUnidades").DolarEstadounidense.value = "";
+    document.getElementById("lasUnidades").Euros.value = "";
+    document.getElementById("lasUnidades").Reales.value = "";
+    document.getElementById("lasUnidades").PesoArgentino.value = "";
+  } else {
+    if (monedaEntrada === monedaSalida) {
             document.getElementById("resultado").textContent = cantidad;
         } else if (monedaEntrada === "Dolar-(Estadounidense)") {
             if (monedaSalida === "Libras-(Esterlinas)") {
