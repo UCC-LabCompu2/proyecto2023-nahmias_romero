@@ -29,10 +29,6 @@ table, tr, td, th {
     position: relative;
 }
 
-/*canvas {*/
-/*    border: 1px solid #000000;*/
-/*}*/
-
 #contactenosCheto {
     width: 200px;
 }
@@ -48,4 +44,3 @@ a:hover {
 a:active {
     font-weight: bold;
 }
-
