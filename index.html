@@ -56,14 +56,16 @@
                 </select>
             </p>
             <p>
-                <button type="button" onclick="conversorMonedas(); setInterval(animarBillete, 50)">CONVERTIR</button>
+                <button type="button" onclick="conversorMonedas(); animarBillete();">CONVERTIR</button>
             </p>
             <p>
                 <label for="resultado">TOTAL: </label>
                 <span id="resultado"></span>
             </p>
-            <canvas id="canvas"></canvas>
-            <img alt="esto es una imagen representativa de billete" src="imagenes/billete.png">
+            <div id="canvas-container">
+                <canvas id="canvas"></canvas>
+            </div>
+            <img alt="esto es una imagen representativa de billete" id="billete-image" src="imagenes/billete.png">
             <!--Animación -->
         </div>
     </form>
