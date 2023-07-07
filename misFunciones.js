@@ -4,21 +4,21 @@
  */
 
 var x = 0;
-var dx = 0.1/2;
+var dx = 1;
 
 function animarBillete() {
     var canvas = document.getElementById("canvas");
     var ctx = canvas.getContext("2d");
     var monedaSalida = document.getElementById("Moneda-de-salida").value;
 
-    canvas.width = canvas.width;
+    canvas.width = canvas.offsetWidth; // Obtener el ancho del contenedor del canvas
 
     if (monedaSalida === "Dolar-(Estadounidense)") {
         var img = new Image();
         img.src = "imagenes/dolar.png";
     } else if (monedaSalida === "Libras-(Esterlinas)") {
         var img = new Image();
-        img.src = "imagenes/libraEsterlinas.png";
+        img.src = "imagenes/libraEsterlina.png";
     } else if (monedaSalida === "Euros") {
         var img = new Image();
         img.src = "imagenes/euro.png";
@@ -30,8 +30,7 @@ function animarBillete() {
         img.src = "imagenes/pesosArg.png";
     }
 
-    var x = 0;
-    var dx = 1;
+    x = canvas.width; // Establecer la posición inicial del billete al final del canvas
 
     img.onload = function () {
         setInterval(function () {
@@ -39,15 +38,14 @@ function animarBillete() {
 
             ctx.drawImage(img, x, 10);
 
-            x += dx;
+            x -= dx; // Mover el billete hacia la izquierda
 
-            if (x + img.width > canvas.width) {
-                x = 0;
+            if (x + img.width < 0) {
+                x = canvas.width; // Reiniciar la posición del billete al final del canvas
             }
-        }, 10);
+        }, 20); // Aumentar el intervalo de tiempo para que la animación sea más lenta
     };
 }
-animarBillete();
 
 
 /**
