@@ -3,38 +3,49 @@
  * @method animarBillete
  */
 
-var y = 0;
-var dy = 1;
+var x = 0;
+var dx = 0.1/2;
 
 function animarBillete() {
-  var canvas = document.getElementById("canvas");
-  var ctx = canvas.getContext("2d");
-  var monedaSalida = document.getElementById("Moneda-de-salida").value;
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+    var monedaSalida = document.getElementById("Moneda-de-salida").value;
 
-  canvas.width = canvas.width;
+    canvas.width = canvas.width;
 
-  if (monedaSalida === "Dolar-(Estadounidense)") {
-    var img = new Image();
-    img.src = "imagenes/dolar.png";
-  } else if (monedaSalida === "Libras-(Esterlinas)") {
-    var img = new Image();
-    img.src = "imagenes/libraEsterlina.png";
-  } else if (monedaSalida === "Euros") {
-    var img = new Image();
-    img.src = "imagenes/euro.png";
-  } else if (monedaSalida === "Reales") {
-    var img = new Image();
-    img.src = "imagenes/reales.png";
-  } else if (monedaSalida === "Peso-(Argentino)") {
-    var img = new Image();
-    img.src = "imagenes/pesosArg.png";
-  }
+    if (monedaSalida === "Dolar-(Estadounidense)") {
+        var img = new Image();
+        img.src = "imagenes/dolar.png";
+    } else if (monedaSalida === "Libras-(Esterlinas)") {
+        var img = new Image();
+        img.src = "imagenes/libraEsterlina.png";
+    } else if (monedaSalida === "Euros") {
+        var img = new Image();
+        img.src = "imagenes/euro.png";
+    } else if (monedaSalida === "Reales") {
+        var img = new Image();
+        img.src = "imagenes/reales.png";
+    } else if (monedaSalida === "Peso-(Argentino)") {
+        var img = new Image();
+        img.src = "imagenes/pesosArg.png";
+    }
 
-  img.onload = function () {
-    ctx.drawImage(img, y, 10);
-  };
-  y += dy;
+    img.onload = function () {
+        setInterval(function() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            ctx.drawImage(img, x, 10);
+
+            x += dx;
+
+            if (x + img.width > canvas.width || x < 0) {
+                dx = -dx;
+            }
+        }, 10);
+    };
 }
+animarBillete();
+
 
 /**
  * Convierte de una moneda a otra
@@ -42,33 +53,33 @@ function animarBillete() {
  */
 
 function conversorMonedas() {
-  const monedaEntrada = document.getElementById("Moneda-de-entrada").value;
-  const monedaSalida = document.getElementById("Moneda-de-salida").value;
-  let cantidad = document.getElementById("Cantidad").value;
+    const monedaEntrada = document.getElementById("Moneda-de-entrada").value;
+    const monedaSalida = document.getElementById("Moneda-de-salida").value;
+    let cantidad = document.getElementById("Cantidad").value;
 
-  if (cantidad.length > 10) {
-    document.getElementById("resultado").textContent = "";
-    alert("La cantidad ingresada supera el límite de caracteres permitido.");
-    return; // Frena el funcionamiento del código de la función si la cantidad es demasiado larga.
-  }
+    if (cantidad.length > 10) {
+        document.getElementById("resultado").textContent = "";
+        alert("La cantidad ingresada supera el límite de caracteres permitido.");
+        return; // Frena el funcionamiento del código de la función si la cantidad es demasiado larga.
+    }
 
-  if (isNaN(cantidad) || cantidad <= 0) {
-    document.getElementById("resultado").textContent = "";
-    alert("El valor ingresado es incorrecto");
-    return; // Detiene la ejecución de la función si la cantidad es incorrecta.
-  }
+    if (isNaN(cantidad) || cantidad <= 0) {
+        document.getElementById("resultado").textContent = "";
+        alert("El valor ingresado es incorrecto");
+        return; // Detiene la ejecución de la función si la cantidad es incorrecta.
+    }
 
-  if (isNaN(cantidad)) {
-    // Aquí se fija que no haya letras y, en caso de que sí las haya, muestra un mensaje de alerta
-    document.getElementById("lasUnidades").LibrasEsterlinas.value = "";
-    document.getElementById("lasUnidades").DolarEstadounidense.value = "";
-    document.getElementById("lasUnidades").Euros.value = "";
-    document.getElementById("lasUnidades").Reales.value = "";
-    document.getElementById("lasUnidades").PesoArgentino.value = "";
+    if (isNaN(cantidad)) {
+        // Aquí se fija que no haya letras y, en caso de que sí las haya, muestra un mensaje de alerta
+        document.getElementById("lasUnidades").LibrasEsterlinas.value = "";
+        document.getElementById("lasUnidades").DolarEstadounidense.value = "";
+        document.getElementById("lasUnidades").Euros.value = "";
+        document.getElementById("lasUnidades").Reales.value = "";
+        document.getElementById("lasUnidades").PesoArgentino.value = "";
 
 
-  } else {
-    if (monedaEntrada === monedaSalida) {
+    } else {
+        if (monedaEntrada === monedaSalida) {
             document.getElementById("resultado").textContent = cantidad;
         } else if (monedaEntrada === "Dolar-(Estadounidense)") {
             if (monedaSalida === "Libras-(Esterlinas)") {
