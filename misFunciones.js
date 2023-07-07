@@ -18,7 +18,7 @@ function animarBillete() {
         img.src = "imagenes/dolar.png";
     } else if (monedaSalida === "Libras-(Esterlinas)") {
         var img = new Image();
-        img.src = "imagenes/libraEsterlina.png";
+        img.src = "imagenes/libraEsterlinas.png";
     } else if (monedaSalida === "Euros") {
         var img = new Image();
         img.src = "imagenes/euro.png";
@@ -30,16 +30,19 @@ function animarBillete() {
         img.src = "imagenes/pesosArg.png";
     }
 
+    var x = 0;
+    var dx = 1;
+
     img.onload = function () {
-        setInterval(function() {
+        setInterval(function () {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             ctx.drawImage(img, x, 10);
 
             x += dx;
 
-            if (x + img.width > canvas.width || x < 0) {
-                dx = -dx;
+            if (x + img.width > canvas.width) {
+                x = 0;
             }
         }, 10);
     };
