@@ -5,6 +5,7 @@
 
 var x = 0;
 var dx = 1;
+var animationInterval; // Variable para almacenar el identificador del intervalo de animación
 
 function animarBillete() {
     var canvas = document.getElementById("canvas");
@@ -33,7 +34,10 @@ function animarBillete() {
     x = canvas.width; // Establecer la posición inicial del billete al final del canvas
 
     img.onload = function () {
-        setInterval(function () {
+        // Limpiar el intervalo anterior antes de iniciar una nueva animación
+        clearInterval(animationInterval);
+
+        animationInterval = setInterval(function () {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             ctx.drawImage(img, x, 10);
@@ -46,6 +50,7 @@ function animarBillete() {
         }, 20); // Aumentar el intervalo de tiempo para que la animación sea más lenta
     };
 }
+
 
 
 /**
