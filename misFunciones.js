@@ -3,14 +3,14 @@
  * @method animarBillete
  */
 
-var x = 0;
-var dx = 1;
-var animationInterval; // Variable para almacenar el identificador del intervalo de animación
+let x = 0;
+let dx = 1;
+let animationInterval; // Variable para almacenar el identificador del intervalo de animación
 
 function animarBillete() {
-    var canvas = document.getElementById("canvas");
-    var ctx = canvas.getContext("2d");
-    var monedaSalida = document.getElementById("Moneda-de-salida").value;
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    const monedaSalida = document.getElementById("Moneda-de-salida").value;
 
     let cantidad = parseFloat(document.getElementById("Cantidad").value);
     if (isNaN(cantidad) || cantidad <= 0) {
@@ -26,19 +26,19 @@ function animarBillete() {
     canvas.width = canvas.offsetWidth; // Obtener el ancho del contenedor del canvas
 
     if (monedaSalida === "Dolar-(Estadounidense)") {
-        var img = new Image();
+        let img = new Image();
         img.src = "imagenes/dolar.png";
     } else if (monedaSalida === "Libras-(Esterlinas)") {
-        var img = new Image();
+        let img = new Image();
         img.src = "imagenes/libraEsterlina.png";
     } else if (monedaSalida === "Euros") {
-        var img = new Image();
+        let img = new Image();
         img.src = "imagenes/euro.png";
     } else if (monedaSalida === "Reales") {
-        var img = new Image();
+        let img = new Image();
         img.src = "imagenes/reales.png";
     } else if (monedaSalida === "Peso-(Argentino)") {
-        var img = new Image();
+        let img = new Image();
         img.src = "imagenes/pesosArg.png";
     }
 
