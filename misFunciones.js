@@ -12,6 +12,17 @@ function animarBillete() {
     var ctx = canvas.getContext("2d");
     var monedaSalida = document.getElementById("Moneda-de-salida").value;
 
+    let cantidad = parseFloat(document.getElementById("Cantidad").value);
+    if (isNaN(cantidad) || cantidad <= 0) {
+        // Mostrar el cartel de error solo si no hay una animación en curso
+        if (!animationInterval) {
+            alert("El valor ingresado es incorrecto o negativo. Por favor, ingrese un valor válido mayor que cero.");
+            document.getElementById("Cantidad").value = ""; // Borrar el campo de cantidad
+        }
+        clearInterval(animationInterval); // Detener la animación si ya hay una en curso
+        return; // Detiene la animación si la cantidad es incorrecta.
+    }
+
     canvas.width = canvas.offsetWidth; // Obtener el ancho del contenedor del canvas
 
     if (monedaSalida === "Dolar-(Estadounidense)") {
@@ -61,7 +72,16 @@ function animarBillete() {
 function conversorMonedas() {
     const monedaEntrada = document.getElementById("Moneda-de-entrada").value;
     const monedaSalida = document.getElementById("Moneda-de-salida").value;
-    let cantidad = document.getElementById("Cantidad").value;
+    let cantidad = parseFloat(document.getElementById("Cantidad").value);
+
+    // Validar si la cantidad es un número válido y mayor que cero
+    if (isNaN(cantidad) || cantidad <= 0) {
+        document.getElementById("resultado").textContent = "";
+        alert("El valor ingresado es incorrecto o negativo. Por favor, ingrese un valor válido mayor que cero.");
+        document.getElementById("Cantidad").value = ""; // Borrar el campo de cantidad
+        clearInterval(animationInterval); // Detener la animación si ya hay una en curso
+        return; // Detiene la ejecución de la función si la cantidad es incorrecta.
+    }
 
     if (cantidad.length > 10) {
         document.getElementById("resultado").textContent = "";
@@ -69,11 +89,6 @@ function conversorMonedas() {
         return; // Frena el funcionamiento del código de la función si la cantidad es demasiado larga.
     }
 
-    if (isNaN(cantidad) || cantidad <= 0) {
-        document.getElementById("resultado").textContent = "";
-        alert("El valor ingresado es incorrecto");
-        return; // Detiene la ejecución de la función si la cantidad es incorrecta.
-    }
 
     if (isNaN(cantidad)) {
         // Aquí se fija que no haya letras y, en caso de que sí las haya, muestra un mensaje de alerta
