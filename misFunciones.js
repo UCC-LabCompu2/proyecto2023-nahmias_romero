@@ -5,7 +5,7 @@
 
 let x = 0;
 let dx = 1;
-let animationInterval; // Variable para almacenar el identificador del intervalo de animación
+let animationInterval; 
 
 function animarBillete() {
     const canvas = document.getElementById("canvas");
@@ -14,18 +14,17 @@ function animarBillete() {
 
     let cantidad = parseFloat(document.getElementById("Cantidad").value);
     if (isNaN(cantidad) || cantidad <= 0) {
-        // Mostrar el cartel de error solo si no hay una animación en curso
         if (!animationInterval) {
             alert("El valor ingresado es incorrecto o negativo. Por favor, ingrese un valor válido mayor que cero.");
-            document.getElementById("Cantidad").value = ""; // Borrar el campo de cantidad
+            document.getElementById("Cantidad").value = ""; 
         }
-        clearInterval(animationInterval); // Detener la animación si ya hay una en curso
-        return; // Detiene la animación si la cantidad es incorrecta.
+        clearInterval(animationInterval); 
+        return; 
     }
 
-    canvas.width = canvas.offsetWidth; // Obtener el ancho del contenedor del canvas
+    canvas.width = canvas.offsetWidth; 
 
-    let img = new Image(); // Declarar la variable img fuera del if-else para poder usarla después
+    let img = new Image(); 
     if (monedaSalida === "Dolar-(Estadounidense)") {
         img.src = "imagenes/dolar.png";
     } else if (monedaSalida === "Libras-(Esterlinas)") {
@@ -38,10 +37,9 @@ function animarBillete() {
         img.src = "imagenes/pesosArg.png";
     }
 
-    x = canvas.width; // Establecer la posición inicial del billete al final del canvas
-
+    x = canvas.width; 
     img.onload = function () {
-        // Limpiar el intervalo anterior antes de iniciar una nueva animación
+        
         clearInterval(animationInterval);
 
         animationInterval = setInterval(function () {
@@ -49,12 +47,12 @@ function animarBillete() {
 
             ctx.drawImage(img, x, 10);
 
-            x -= dx; // Mover el billete hacia la izquierda
+            x -= dx; 
 
             if (x + img.width < 0) {
-                x = canvas.width; // Reiniciar la posición del billete al final del canvas
+                x = canvas.width; 
             }
-        }, 20); // Aumentar el intervalo de tiempo para que la animación sea más lenta
+        }, 20); 
     };
 }
 
@@ -69,24 +67,23 @@ function conversorMonedas() {
     const monedaSalida = document.getElementById("Moneda-de-salida").value;
     let cantidad = parseFloat(document.getElementById("Cantidad").value);
 
-    // Validar si la cantidad es un número válido y mayor que cero
+    
     if (isNaN(cantidad) || cantidad <= 0) {
         document.getElementById("resultado").textContent = "";
         alert("El valor ingresado es incorrecto o negativo. Por favor, ingrese un valor válido mayor que cero.");
-        document.getElementById("Cantidad").value = ""; // Borrar el campo de cantidad
-        clearInterval(animationInterval); // Detener la animación si ya hay una en curso
-        return; // Detiene la ejecución de la función si la cantidad es incorrecta.
+        document.getElementById("Cantidad").value = ""; 
+        clearInterval(animationInterval); 
+        return; 
     }
 
     if (cantidad.length > 10) {
         document.getElementById("resultado").textContent = "";
         alert("La cantidad ingresada supera el límite de caracteres permitido.");
-        return; // Frena el funcionamiento del código de la función si la cantidad es demasiado larga.
+        return; 
     }
 
 
     if (isNaN(cantidad)) {
-        // Aquí se fija que no haya letras y, en caso de que sí las haya, muestra un mensaje de alerta
         document.getElementById("lasUnidades").LibrasEsterlinas.value = "";
         document.getElementById("lasUnidades").DolarEstadounidense.value = "";
         document.getElementById("lasUnidades").Euros.value = "";
