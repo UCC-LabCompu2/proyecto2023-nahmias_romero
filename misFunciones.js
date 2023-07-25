@@ -5,7 +5,7 @@
 
 let x = 0;
 let dx = 1;
-let animationInterval; 
+let animationInterval;
 
 function animarBillete() {
     const canvas = document.getElementById("canvas");
@@ -15,16 +15,15 @@ function animarBillete() {
     let cantidad = parseFloat(document.getElementById("Cantidad").value);
     if (isNaN(cantidad) || cantidad <= 0) {
         if (!animationInterval) {
-            alert("El valor ingresado es incorrecto o negativo. Por favor, ingrese un valor válido mayor que cero.");
-            document.getElementById("Cantidad").value = ""; 
+            document.getElementById("Cantidad").value = "";
         }
-        clearInterval(animationInterval); 
-        return; 
+        clearInterval(animationInterval);
+        return;
     }
 
-    canvas.width = canvas.offsetWidth; 
+    canvas.width = canvas.offsetWidth;
 
-    let img = new Image(); 
+    let img = new Image();
     if (monedaSalida === "Dolar-(Estadounidense)") {
         img.src = "imagenes/dolar.png";
     } else if (monedaSalida === "Libras-(Esterlinas)") {
@@ -37,9 +36,9 @@ function animarBillete() {
         img.src = "imagenes/pesosArg.png";
     }
 
-    x = canvas.width; 
+    x = canvas.width;
     img.onload = function () {
-        
+
         clearInterval(animationInterval);
 
         animationInterval = setInterval(function () {
@@ -47,12 +46,12 @@ function animarBillete() {
 
             ctx.drawImage(img, x, 10);
 
-            x -= dx; 
+            x -= dx;
 
             if (x + img.width < 0) {
-                x = canvas.width; 
+                x = canvas.width;
             }
-        }, 20); 
+        }, 20);
     };
 }
 
@@ -67,19 +66,20 @@ function conversorMonedas() {
     const monedaSalida = document.getElementById("Moneda-de-salida").value;
     let cantidad = parseFloat(document.getElementById("Cantidad").value);
 
-    
+
     if (isNaN(cantidad) || cantidad <= 0) {
         document.getElementById("resultado").textContent = "";
         alert("El valor ingresado es incorrecto o negativo. Por favor, ingrese un valor válido mayor que cero.");
-        document.getElementById("Cantidad").value = ""; 
-        clearInterval(animationInterval); 
-        return; 
+        document.getElementById("Cantidad").value = "";
+        clearInterval(animationInterval);
+        return;
     }
-
-    if (cantidad.length > 10) {
+    if (cantidad.toString().length > 10) {
         document.getElementById("resultado").textContent = "";
         alert("La cantidad ingresada supera el límite de caracteres permitido.");
-        return; 
+        document.getElementById("Cantidad").value = "";
+        clearInterval(animationInterval);
+        return;
     }
 
 
