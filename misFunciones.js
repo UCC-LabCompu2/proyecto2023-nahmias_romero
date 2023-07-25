@@ -25,20 +25,16 @@ function animarBillete() {
 
     canvas.width = canvas.offsetWidth; // Obtener el ancho del contenedor del canvas
 
+    let img = new Image(); // Declarar la variable img fuera del if-else para poder usarla después
     if (monedaSalida === "Dolar-(Estadounidense)") {
-        let img = new Image();
         img.src = "imagenes/dolar.png";
     } else if (monedaSalida === "Libras-(Esterlinas)") {
-        let img = new Image();
         img.src = "imagenes/libraEsterlina.png";
     } else if (monedaSalida === "Euros") {
-        let img = new Image();
         img.src = "imagenes/euro.png";
     } else if (monedaSalida === "Reales") {
-        let img = new Image();
         img.src = "imagenes/reales.png";
     } else if (monedaSalida === "Peso-(Argentino)") {
-        let img = new Image();
         img.src = "imagenes/pesosArg.png";
     }
 
@@ -61,7 +57,6 @@ function animarBillete() {
         }, 20); // Aumentar el intervalo de tiempo para que la animación sea más lenta
     };
 }
-
 
 
 /**
