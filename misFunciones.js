@@ -22,7 +22,7 @@ function animarBillete() {
         return;
     }
 
-    canvas.width = canvas.offsetWidth;
+    
 
     let img = new Image();
     if (monedaSalida === "Dolar-(Estadounidense)") {
