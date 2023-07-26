@@ -17,7 +17,8 @@ function animarBillete() {
         if (!animationInterval) {
             document.getElementById("Cantidad").value = "";
         }
-        clearInterval(animationInterval);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // clearInterval(animationInterval);
         return;
     }
 
